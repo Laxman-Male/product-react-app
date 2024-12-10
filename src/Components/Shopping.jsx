@@ -5,7 +5,8 @@ import Cart from './Cart'
 
 const Shopping = ({addcart}) => {
 
-    const [shop, setshop] = useState(true)
+    //made it false to make image 3d
+    const [shop, setshop] = useState(false)
      const handleshop = () => {
         setshop(!shop);
       
@@ -105,7 +106,7 @@ const Shopping = ({addcart}) => {
                         Shop by Category
                     </div>
                     <div className='flex justify-center '>
-                        <div className='  grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1   p-5'>
+                        <div className={` ${shop ? " grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1   p-5": "flex flex-col items-center"} `}>
                             {productData.map((pro) => (
 
 

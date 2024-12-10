@@ -19,7 +19,7 @@ const Home = () => {
            className='text-8xl font-bold ssm:text-6xl ssm:font-sans '
            initial={{ opacity: 0, y: 20 }} 
            animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 1 }}
+           transition={{ duration: 1,delay:1 }}
            > 
            A3 Headphone 
            </motion.p>
