@@ -10,6 +10,9 @@ export default {
         'xs': { 'max': '639px' }, // Targeting screens smaller than 640px for home image adjust
         'ssm':{'max': '638px'},  //for item list adjust
       },
+      perspective:{
+        1200: '1200px',
+      }
     },
   },
   plugins: [],
