@@ -122,10 +122,10 @@ const ShopList = ({ id, product, shop, AddtoCart, cart, backToCart, setbackToCar
 
                 <div  id="outer" className=''>
                
-                <div id={id}  className=" inner">
-                    <img className="ani_image   sm:w-56 ssm:w-3/4 md:w-3/4    h-52   relative  items-center shadow-xl shadow-violet-700/80   p-0 m-10 mb-3 mt-2      rounded-2xl   " src={img} />
+                <div id={id}  className="inner">
+                    <img className="   " src={img} />
 
-                    <div className='   flex flex-col items-start px-3   ml-1  '>
+                    <div className=''>
 
 
                     </div>
