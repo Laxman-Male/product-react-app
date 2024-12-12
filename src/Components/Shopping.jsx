@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import App from '../App'
+// import App from '../App'
 import ShopList from './ShopList'
 import Cart from './Cart'
 
@@ -108,13 +108,13 @@ const Shopping = ({ addcart }) => {
                     {shop && (
                         <div className='flex justify-center '>
                             {/* <div className={` ${shop ? " grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1   p-5": "flex flex-col items-center"} `}> */}
-                            <div className={" grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1   p-5 "}>
+                            <div className={" grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1   p-5"}>
 
                                 {productData.map((pro) => (
                                     <ShopList
                                         key={pro.id}
-                                        id={pro.id}
-                                        product={pro}
+                                        // id={pro.id}
+                                        // product={pro}
                                         shop={shop}
                                         AddtoCart={AddtoCart}
                                         handleremove={handleremove}
@@ -124,17 +124,15 @@ const Shopping = ({ addcart }) => {
 
                             </div>
                         </div>
-
                     )}
-
 
 
                     {!shop && (
                         <div className=''>
-                            {/* <div className={` ${shop ? " grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1   p-5": "flex flex-col items-center"} `}> */}
+                      
                             <div className={"  "}>
 
-                                {productData.slice(0,8).map((pro) => (
+                                {productData.slice(0, 1).map((pro) => (
                                     <ShopList
                                         key={pro.id}
                                         id={pro.id}
@@ -150,6 +148,8 @@ const Shopping = ({ addcart }) => {
                         </div>
 
                     )}
+
+
 
 
                     <Cart cartitem={cart} removeItem={removeItem} handleremove={handleremove} cart={cart} quantity={quantity} setquantity={setquantity} />
