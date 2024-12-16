@@ -135,12 +135,11 @@ const ShopList = ({ id, product, shop, AddtoCart, cart, backToCart, setbackToCar
             <img src=" img/e5.jpg" />
              <img src=" img/ww3.png" />
               
-
-
           </div>
 
 
 
+       
 
 
 
@@ -220,9 +219,13 @@ const ShopList = ({ id, product, shop, AddtoCart, cart, backToCart, setbackToCar
            
 
                       </div >
+                      <marquee id='new_feture' className="text-2xl font-semibold"> Newly Featured ! </marquee>
                       </div>
+                     
+                      
 
             )}
+                      
 
 
 

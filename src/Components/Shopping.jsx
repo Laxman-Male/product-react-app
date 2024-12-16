@@ -156,7 +156,7 @@ const Shopping = ({ addcart }) => {
                 </div>
                 <div className='flex  justify-center'>
 
-                    <button className='border border-violet-500 text-cyan-100 font-bold w-40 h-10 rounded-full bg-violet-400 items-center mt-20 text-xl hover:bg-violet-500' onClick={handleshop}> {shop ? "Hide" : "Show All"}  </button>
+                    <button className='border border-violet-500 text-cyan-100 font-bold w-40 h-10 rounded-full bg-violet-400 items-center mt-20 text-xl hover:bg-violet-500' onClick={handleshop}> {shop ? "Show Less" : "Show All"}  </button>
                     {/* <Cart cartitem={cart}/> */}
                 </div>
             </section>

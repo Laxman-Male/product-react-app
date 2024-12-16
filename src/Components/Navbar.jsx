@@ -1,6 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
 import Cart from './Cart'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faUserNurse } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+
 import { Offcanvas, Button, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -86,10 +93,19 @@ const Navbar = () => {
                         </ul> */}
                     <ul className='flex gap-5 items-center px-5 py-2'>
 
-                        <li className=' font-semibold hover:font-bold cursor-pointer text-xl'> Home </li>
-                        <li className=' font-semibold hover:font-bold cursor-pointer text-xl'> About </li>
-                        <li className=' font-semibold hover:font-bold cursor-pointer text-xl'> Service  </li>
-                        <li className=' font-semibold hover:font-bold cursor-pointer text-xl'> Contact us </li>
+                        <li className=' font-semibold hover:font-bold cursor-pointer text-xl'>
+                         
+                         <FontAwesomeIcon icon={faHouse} />
+                             </li>
+                        <li className=' font-semibold hover:font-bold cursor-pointer text-xl'> 
+                        <FontAwesomeIcon icon={faGlobe} />
+                             </li>
+                        <li className=' font-semibold hover:font-bold cursor-pointer text-xl'> 
+                        <FontAwesomeIcon icon={faUserNurse} />
+                             </li>
+                        <li className=' font-semibold hover:font-bold cursor-pointer text-xl'> 
+                        <FontAwesomeIcon icon={faPhone} />
+                             </li>
                         {/* <buttonn onclick={handleCartDesign} > */}
 
                         {/* <li className='cursor-pointer' onClick={handleCartDesign}><lord-icon
