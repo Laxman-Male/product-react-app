@@ -11,10 +11,31 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Offcanvas, Button, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// import Select from "react-select"
+import { useForm, Controller } from "react-hook-form"
+// import { Input } from "@material-ui/core"
+
+ 
+
+
+
 const Navbar = () => {
     // const handleCartDesign=()=>{
     //     console.log("cart design")
     // }
+
+
+    const { control, handleSubmit } = useForm({
+        defaultValues: {
+          firstName: "",
+          select: {},
+        },
+      })
+      const onSubmit = (data) => console.log(data)
+    
+
+
+
 
     const [show, setShow] = useState(false);
 
@@ -54,8 +75,28 @@ const Navbar = () => {
                                             <Dropdown.Item href="#">Another action</Dropdown.Item>
                                             <Dropdown.Item href="#">Something else here</Dropdown.Item>
                                         </Dropdown.Menu>
+                                        
                                     </Dropdown>
+                                    <form className='border border-black text-lg  '> 
+                                        <div> 
+                                        <input type='checkbox'/> 
+                                        <label classname="ml-5"> EarPhone</label>
+                                        </div>
+                                        <div>
+                                        <input type='checkbox'/> 
+                                        <label> HeadPhone</label>
+                                        </div>
+                                        <div>
+                                        <input type='checkbox'/> 
+                                        <label> SmartWatch  </label>
+                                        </div>
+                                        <div>
+                                        <input type='checkbox'/> 
+                                        <label>Wireless </label>
+                                        </div>
+                                    </form>
                                 </Offcanvas.Body>
+                                
                             </Offcanvas>
                         </div>
                     </div>
