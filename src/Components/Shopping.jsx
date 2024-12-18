@@ -86,7 +86,7 @@ const Shopping = ({ addcart }) => {
         { id: "2", title: "HeadPhone", review: "⭐⭐⭐", img: "img/h1.jpg", price: "699" },
         { id: "3", title: "Wireless", review: "⭐⭐⭐⭐", img: "img/we1.jpg", price: "599" },
         { id: "4", title: "SmartWatch", review: "⭐⭐⭐⭐", img: "img/ww1.jpeg", price: "799" },
-        { id: "5", title: "EarPhone", review: "⭐⭐⭐⭐⭐", img: "img/e3.jpg", price: "299" },
+        { id: "5", title: "EarPhone", review: "⭐⭐⭐⭐", img: "img/e3.jpg", price: "299" },
 
         { id: "6", title: "HeadPhone", review: "⭐⭐⭐⭐", img: "img/h3.jpg", price: "899" },
         { id: "7", title: "Wireless", review: "⭐⭐⭐", img: "img/we3.jpg", price: "699" },
@@ -101,16 +101,20 @@ const Shopping = ({ addcart }) => {
         { id: "16", title: "SmartWatch", review: "⭐⭐⭐⭐", img: "img/ww5.jpg", price: "999" },
     ];
 
-    const [filter,setFilter]= useState('All ')
+    const [filter,setFilter]= useState('All')
 
-    const filterEarphone=(e)=>{
+    const filterEarphone=(category)=>{
         // console.log(e.target)
-        setFilter('EarPhone')
+        setFilter(category)
+        // console.log(filter)
         console.log(filter)
-        console.log(productData)
         console.log(productData)
 
     }
+
+    // const filteredProducts = productData.filter(product => filter === 'All' || product.title === filter);
+
+    const filteredData= productData.filter(product=> filter==='All' || product.title===filter);
 
     return (
 
@@ -137,18 +141,18 @@ const Shopping = ({ addcart }) => {
 
 
 
-                             <div className='border border-black sm:overflow-x-scroll ssm:overflow-x-scroll' >
+                             <div className=' sm:overflow-x-scroll ssm:overflow-x-scroll' >
                         <ul className='flex gap-3 justify-start px-5 m-0 '>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer '>All </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1 font-semibold cursor-pointer ' onClick={filterEarphone}> EarPhone </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer '> HeadPhone </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer '> Wireless </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2  py-1 font-semibold cursor-pointer '> SmartWatch </li>
+                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={()=>filterEarphone('All')} >All </li>
+                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1 font-semibold cursor-pointer ' onClick={()=>filterEarphone('EarPhone')}> EarPhone </li>
+                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={()=>filterEarphone('HeadPhone')} > HeadPhone </li>
+                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={()=>filterEarphone('Wireless')} > Wireless </li>
+                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2  py-1 font-semibold cursor-pointer' onClick={()=>filterEarphone('SmartWatch')} > SmartWatch </li>
                         </ul>
                     </div>
-                            <div className={" grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1   p-5"}>
+                            <div className={" grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1 middle:grid-cols-3   p-5"}>
 
-                                {productData.map((pro) => (
+                                {filteredData.map((pro) => (
                                     <ShopList
                                         key={pro.id}
                                         id={pro.id}

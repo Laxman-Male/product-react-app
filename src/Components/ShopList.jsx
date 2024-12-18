@@ -91,16 +91,16 @@ const ShopList = ({ id, product, shop, AddtoCart, cart, backToCart, setbackToCar
       {shop && (
         <div className=''>
           {/* <div className={`flex   flex-col ${shop}`}> */}
-          <div id={id} className={`flex    sm:flex-row md:flex-col lg:flex-col  ssm:flex-col   flex-col ${shop ? ' ' : 'border border-black   '}    sm:border border-violet-300 bg-white rounded-2xl px-2 md:border   lg:border   `}>
-            <img className='   sm:w-56 ssm:w-32/4 md:w-3/4    h-52   relative  items-center shadow-xl shadow-violet-700/80   p-0 m-10 mb-3 mt-2      rounded-2xl   ' src={img} />
+          <div id={id} className={`flex    sm:flex-row md:flex-col lg:flex-col  ssm:flex-row  moreSmall:flex-col  flex-col ${shop ? ' ' : 'border border-black   '} moreSmall:border border-red-600 moreSmall:w-3/4  moreSmall:m-auto      ssm:border border-violet-400   sm:border border-violet-300 bg-white rounded-2xl px-2 md:border   lg:border    `}>
+            <img className='    sm:w-56 ssm:w-3/4 md:w-3/4    h-52   relative  items-center shadow-xl shadow-violet-700/80   p-0 m-10 mb-3 mt-2      rounded-2xl   ' src={img} />
             <div className='   flex flex-col items-start px-3   ml-1  '>
 
-              <p className=' px-2 font-bold text-xl m-1'> {title}</p>
+              <p className=' px-3 font-bold text-xl m-1 '> {title}</p>
               <p className=' px-3 py-1 font-semibold text-xl  rounded-lg  m-1 '> Review-{review}</p>
               <p className='px-3 font-semibold text-2xl m-1'> Rs.{price}</p>
 
 
-              <button className='border border-violet-400 rounded-lg text-lg px-3 py-1 bg-violet-300 font-semibold m-2  ' onClick={() => AddtoCart(product)} disabled={isItemInCart}>
+              <button className='border border-violet-400 rounded-lg text-lg px-3 py-1 bg-violet-300 font-semibold m-2 ssm:text-sm ' onClick={() => AddtoCart(product)} disabled={isItemInCart}>
                 {isItemInCart ? ' Added' : 'Add to Cart'}
               </button>
 
