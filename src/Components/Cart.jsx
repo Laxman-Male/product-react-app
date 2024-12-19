@@ -19,7 +19,6 @@ const Cart = ({ setquantity, quantity, handleremove, cartitem = [] }) => {
   // const [cart, setcart]=useState(cartitem)
 
 
-
   useEffect(() => {
     let newtotal = 0;
     cartitem.forEach(item => {
@@ -27,10 +26,23 @@ const Cart = ({ setquantity, quantity, handleremove, cartitem = [] }) => {
       newtotal = newtotal + parseFloat(item.price) * itemQuntity;
     });
     settotal(newtotal);
-
+    
   }, [cartitem, quantity])
+  
+  const [count,setcount]=useState(0)
+//   const redPointer=()=>{
+//   setcount(prevCount=> prevCount +1);
+// }
 
+useEffect(()=>{
+  if(total>0){
+    setcount(prevCount=>prevCount+1)
+  }
+  
+  // cartitem.forEach(itemQ=>{
 
+  // })
+},[])
 
   const handleplus = (item) => {
 
@@ -179,12 +191,13 @@ const Cart = ({ setquantity, quantity, handleremove, cartitem = [] }) => {
   return (
     <>
 
-      <ul  className='fixed top-2 right-2 max-h-[80vh] overflow-y-auto '>
+      <ul  className='absolute top-2 right-2 max-h-[80vh] overflow-y-auto  '>
         <li className='cursor-pointer' onClick={handleCartDesign}><lord-icon
           src="https://cdn.lordicon.com/pbrgppbb.json"
           trigger="hover">
          </lord-icon> </li>
       </ul>
+         <li className={`absolute top-1 list-none right-1 rounded-full w-4 h-4 flex  justify-center items-center text-black bg-red-600  ${total==0? 'hidden': ''  } ` }>{count}  </li>
 
       <div className={`fixed top-12 right-1 max-h-[80vh] overflow-y-auto  border border-violet-400 w-1/2  bg-violet-300  rounded-xl ${ displayCart? 'block': "hidden" }`}>
         <div className='flex   justify-center '>
@@ -200,12 +213,12 @@ const Cart = ({ setquantity, quantity, handleremove, cartitem = [] }) => {
                 <p className='px-3 font-semibold text-xl'>Rs.{item.price}</p>
                 <div className=' flex items-center   ml-3 '  >
                   <button className='border border-violet-700 font-bold w-8 rounded-l-md' onClick={() => handleminus(item)}>  - </button>
-                  <p className='border border-violet-700 px-2 w-8 ' > {quantity[item.id] || 1} </p>
+                  <p className='border border-violet-700 px-2  w-8 m-0 ' > {quantity[item.id] || 1} </p>
                   <button className='border border-violet-700 font-bold w-8 rounded-r-md' onClick={() => handleplus(item)}>  + </button>
                 </div>
                 {/* </div> */}
                 {/* <button className=''  onClick={()=>handleremove(item.id)}> {removeItem[item.id] ? "Removed ": "Remove"}  </button>  */}
-                <button className=' border border-violet-500 rounded-xl py-1 px-4 my-1 text-lg font-semibold ml-3 ' onClick={() => handleremove(item.id)}> Remove  </button>
+                <button className=' border border-violet-500 rounded-xl py-1 px-4 my-1 text-lg font-semibold ml-3   ' onClick={() => handleremove(item.id)}> Remove  </button>
                 {/* <button onClick={()=>handleremove(item.id)} > Remove     </button>
                 {/* <button onClick={()=>handleremove(item.id)} disabled={removeItem[item.id]}  > {removeItem[item.id] ? "Removed ": "Remove"}    </button> */}
               </div>

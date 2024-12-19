@@ -69,8 +69,8 @@ const Navbar = () => {
                                     <Offcanvas.Title >Setting </Offcanvas.Title>
                                 </Offcanvas.Header>
                                 <Offcanvas.Body >
-                                    <div className='p-1 cursor-pointer'>
-                                        <FontAwesomeIcon icon={faUser} />     View your Profile
+                                    <div className='p-1 cursor-pointer border border-gray-500 rounded-xl items-center flex gap-3'>
+                                        <FontAwesomeIcon icon={faUser} className='border border-black p-1 rounded-xl' />     View your Profile
                                     </div>
 
                                     <form className=' text-lg  p-2'>
@@ -105,7 +105,9 @@ const Navbar = () => {
                                             <img className='w-5 cursor-pointer' src='https://th.bing.com/th/id/R.8f265a94a8fd9b0cb24488678ab6d648?rik=79r6hq6icjgjRg&riu=http%3a%2f%2flofrev.net%2fwp-content%2fphotos%2f2016%2f07%2fyoutube_black_logo.jpg&ehk=PyW73Rx8P9vyochnjVRFEEH0HO8s8Xzgt7XVUA3igrE%3d&risl=&pid=ImgRaw&r=0' />
                                         </li>
                                         <li>
+                                            <a href='https://www.linkedin.com/in/laxman-male-0716b62a1/' target='blank'>
                                             <img className='w-5 cursor-pointer' src='https://tse3.mm.bing.net/th/id/OIP.DtzCFTem9bd_3GlVROBlRgHaHa?rs=1&pid=ImgDetMain' />
+                                            </a>
                                         </li>
                                     </ul>
 
