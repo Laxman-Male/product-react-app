@@ -45,14 +45,14 @@ const ShopList = ({ id, product, shop, AddtoCart, cart, backToCart, setbackToCar
         <div id='main_outer'>
           <div id="outer" className=''>
             <div id="inner">
-              <img src=" img/e1.jpg" />
-              <img src="img/h1.jpg " />
-              <img src="img/h4.jpg" />
-              <img src="img/we2.jpg" />
-              <img src="img/ww2.jpg " />
-              <img src=" img/ww5.jpg" />
-              <img src=" img/e5.jpg" />
-              <img src=" img/ww3.png" />
+              <img src=" public/img/e1.jpg" />
+              <img src="public/img/h1.jpg " />
+              <img src="public/img/h4.jpg" />
+              <img src="public/img/we2.jpg" />
+              <img src="public/img/ww2.jpg " />
+              <img src="public/ img/ww5.jpg" />
+              <img src=" public/img/e5.jpg" />
+              <img src=" public/img/ww3.png" />
 
             </div>
 
