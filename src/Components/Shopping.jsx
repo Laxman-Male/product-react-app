@@ -56,7 +56,7 @@ const Shopping = ({ addcart }) => {
         { id: "7", title: "Wireless", review: "⭐⭐⭐", img: "img/we3.jpg", price: "699" },
         { id: "8", title: "SmartWatch", review: "⭐⭐", img: "img/ww3.png", price: "1999" },
         { id: "9", title: "EarPhone", review: "⭐⭐⭐", img: "img/e4.jpg", price: "199" },
-        { id: "10", title: "HeadPhone", review: "⭐⭐⭐⭐⭐", img: "img/h4.jpg", price: "1099" },
+        { id: "10", title: "HeadPhone", review: "⭐⭐⭐⭐", img: "img/h4.jpg", price: "1099" },
         { id: "11", title: "Wireless", review: "⭐⭐", img: "img/we4.jpg", price: "799" },
         { id: "12", title: "SmartWatch", review: "⭐⭐⭐", img: "img/ww4.jpg", price: "1299" },
         { id: "13", title: "EarPhone", review: "⭐⭐⭐", img: "img/e5.jpg", price: "329" },

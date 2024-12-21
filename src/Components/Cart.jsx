@@ -64,13 +64,13 @@ useEffect(()=>{
   return (
     <>
 
-      <ul  className='absolute top-2 right-2 max-h-[80vh] overflow-y-auto  '>
+      <ul  className='absolute top-16 right-2 max-h-[80vh] overflow-y-auto  '>
         <li className='cursor-pointer' onClick={handleCartDesign}><lord-icon
           src="https://cdn.lordicon.com/pbrgppbb.json"
           trigger="hover">
          </lord-icon> </li>
       </ul>
-         <li className={`absolute top-1 list-none right-1 rounded-full w-4 h-4 flex  justify-center items-center text-black bg-red-600  ${total==0? 'hidden': ''  } ` }>  </li>
+         <li className={`absolute top-16 list-none right-1 rounded-full w-4 h-4 flex  justify-center items-center text-black bg-red-600  ${total==0? 'hidden': ''  } ` }>  </li>
 
       <div className={`fixed top-12 right-1 max-h-[80vh] overflow-y-auto  border border-violet-400 w-3/4  bg-violet-300  rounded-xl ${ displayCart? 'block': "hidden" }`}>
         <div className='flex   justify-center '>

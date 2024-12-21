@@ -7,7 +7,8 @@ const Home = () => {
       <div className=" flex justify-end  items-center  lg:flex-row  md:flex-col-reverse sm:flex-col-reverse   xs:flex-col-reverse ">
         <div >
           <motion.p
-            className='text-6xl font-sans ssm:text-5xl ssm:font-sans moreSmall:ml-7 moreSmall:text-4xl '
+            className='text-6xl font-sans ssm:text-5xl ssm:font-sans moreSmall:ml-7 moreSmall:
+            mr-2 moreSmall:text-4xl '
             initial={{ opacity: 0, y: 30 }} 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -16,7 +17,7 @@ const Home = () => {
             </motion.p> 
 
           <motion.p
-           className='text-8xl font-bold ssm:text-6xl ssm:font-sans moreSmall:ml-7 moreSmall:text-5xl '
+           className='text-8xl font-bold ssm:text-6xl ssm:font-sans moreSmall:ml-7 moreSmall:mr-2 moreSmall:text-5xl '
            initial={{ opacity: 0, y: 20 }} 
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 1,delay:1 }}
