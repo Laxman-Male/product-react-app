@@ -79,7 +79,7 @@ const Shopping = ({ addcart }) => {
         <>
             <section>
                 <div className='   '>
-                    <div className='font-bold text-4xl flex  justify-center py-3'>
+                    <div className='font-bold text-4xl flex  justify-center py-3 moreSmall:ml-4'>
                         Shop by Category
                     </div>
                     {shop && (
