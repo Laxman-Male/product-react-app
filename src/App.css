@@ -119,30 +119,24 @@
 
 
 #main_outer{
-  background-image: radial-gradient(rgb(240, 235, 243),rgb(230, 192, 248),rgb(215, 166, 243),rgb(195, 132, 219),rgb(189, 105, 228));
- /* width: 310px; */
- height: 380px;
+  background-image: radial-gradient( rgb(236, 231, 243),rgb(230, 219, 248),rgb(211, 186, 252),rgb(179, 142, 238));
+  height: 380px;
  margin-top: 50px;
  padding-top: 75px;
  border-radius: 10px;
- box-shadow: rgb(207, 143, 223) 8px 8px 8px;
+ box-shadow: rgb(225, 192, 233) 8px 8px 8px;
  
 }
 #outer {
-  /* border: 2px solid red; */
-  /* background-image: radial-gradient(green, blue,black,yellow); */
-  width: 300px;
+   width: 300px;
   height: 220px;
   perspective: 1200px;
-  /* Creates 3D space for the children */
-  margin: 0 auto;
-  /* position: relative; */
-}
+   margin: 0 auto;
+ }
 #inner {
   width: 100%;
   height: 100%;
-  /* position: relative; */
-  top: 0;
+   top: 0;
   left: 0;
   transform-style: preserve-3d;
   animation: rotate 30s infinite linear;
@@ -150,14 +144,12 @@
 
 #outer img {
   width: 100%;
-  /* gap: 100px; */
-  height: 100%;
+   height: 100%;
   /* object-fit: cover; */
   position: absolute;
   top: 0;
   left: 0;
-  /* transform-origin:bottom; */
-  transition: transform 1s ease;
+   transition: transform 1s ease;
   border-radius: 30px;
   
 }
@@ -217,14 +209,10 @@
 
 @media(max-width:920px){
   #outer{
-    /* border: 2px solid red ; */
-    width: 220px;
+     width: 220px;
     height: 200px;
   }
-  #main_outer{
-    /* border: 2px solid blue; */
-    
-  }
+ 
 #new_feture{
   margin-top: 130px;
   margin-bottom: -70px;
@@ -266,47 +254,6 @@
 }
 
 
-/* 
-@media(max-width:710px){
-  
-  
-    
-
-    #inner{
-      animation: moveleft 10s linear infinite;
-    }
-    @keyframes moveleft {
-      0% {
-          transform: translateX(110vw) ;
-          }
-          
-      100% {
-          transform: translateX(-110vw) ;
-      }
-    }
- 
-   #outer{
-    perspective: none;
-    overflow: hidden;
-    border: 2px solid red;
-    width: 500px;
-    position: relative;
-   }
-   #inner{
-    transform-style: flat;
-    display: flex;
-    flex-direction: column;
-     
-    }
-   #inner img{
-  
-     object-fit: cover;
-    border: 2px solid blue;
-    margin-right: 10px;
-   }
-   
-  
-} */
 
 @media(max-width:710px){
   
@@ -318,8 +265,7 @@
 #outer{
   perspective: none;
   overflow: hidden;
-  /* border: 2px solid blue; */
-  padding: 5px;
+   padding: 5px;
   width: 100%;
   height: 100%;
   margin-bottom: -30px;
@@ -333,8 +279,7 @@
     
   } 
   #inner img{
-    /* border: 2px solid red; */
-    width: 100%;
+     width: 100%;
     position: relative;
     animation: moveleft 20s linear infinite;
   }
@@ -344,18 +289,14 @@
         }
         
     100% {
-        transform: translateX(-400vw) ;
+        transform: translateX(-300vw) ;
     }
   } 
 
  #new_feture{
-  /* border: 2px solid red; */
-  padding: 5px;
+   padding: 5px;
   margin-top: -200px;
   
-  
   }
-
-
 
 }

@@ -1,85 +1,49 @@
 import React, { useState } from 'react'
-// import App from '../App'
 import ShopList from './ShopList'
 import Cart from './Cart'
-
 const Shopping = ({ addcart }) => {
 
-    //made it false to make image 3d
     const [shop, setshop] = useState(false)
     const handleshop = () => {
         setshop(!shop);
-
         console.log(shop)
     }
-
-
-
     const [quantity, setquantity] = useState({});
-
 
     const [removeItem, setremoveItem] = useState(false)
     const [backToCart, setbackToCart] = useState(true)
-
-
     const [cart, setcart] = useState([])
-    const AddtoCart = (product) => {
+    const [filter,setFilter]= useState('All')
 
+    const AddtoCart = (product) => {
         setcart(prevCart => {
             if (prevCart.some(item => item.id === product.id)) {
-                // alert("Already added product!")
-                // return <div className='hidden'> </div>
-                return prevCart
+                 return prevCart
             }
             else {
                 console.log("adding new product")
-
 
                 setquantity(prev => ({
                     ...prev,
                     [product.id]: 1
                 }));
 
-
-
-
                 return [...prevCart, product];
             }
         })
-        // setcart([...cart, product]);
-
     };
 
     const handleremove = (itemid) => {
         setcart((prevCart) => prevCart.filter(item => item.id !== itemid));
 
-
-
-        //quantity of product will re-initialize to 1 after  re-render
-
         setquantity(prev => {
             const updatedQuantities = { ...prev };
 
-            // Remove quantity tracking for removed item
             delete updatedQuantities[itemid];
-
             return updatedQuantities;
         });
 
-
-      
-
-
-
-
-        //         setremoveItem(!removeItem)
-        // setbackToCart(!backToCart)
-        // }) )
-        // addcart=(true)
-        // setremoveItem(!removeItem)
     }
-
-  
 
     const productData = [
         { id: "1", title: "EarPhone", review: "⭐⭐⭐⭐", img: "img/e1.jpg", price: "100" },
@@ -101,19 +65,13 @@ const Shopping = ({ addcart }) => {
         { id: "16", title: "SmartWatch", review: "⭐⭐⭐⭐", img: "img/ww5.jpg", price: "999" },
     ];
 
-    const [filter,setFilter]= useState('All')
 
     const filterEarphone=(category)=>{
-        // console.log(e.target)
         setFilter(category)
-        // console.log(filter)
         console.log(filter)
         console.log(productData)
 
     }
-
-    // const filteredProducts = productData.filter(product => filter === 'All' || product.title === filter);
-
     const filteredData= productData.filter(product=> filter==='All' || product.title===filter);
 
     return (
@@ -124,22 +82,8 @@ const Shopping = ({ addcart }) => {
                     <div className='font-bold text-4xl flex  justify-center py-3'>
                         Shop by Category
                     </div>
-                    {/* <div className='border border-black' >
-                        <ul className='flex gap-3 justify-start px-5 m-0 '>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer '>All </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1 font-semibold cursor-pointer '> EarPhone </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer '> HeadPhone </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer '> Wireless </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2  py-1 font-semibold cursor-pointer '> SmartWatch </li>
-                        </ul>
-                    </div> */}
                     {shop && (
-
-
-
                         <div className='flex justify-center flex-col'>
-
-
 
                              <div className=' sm:overflow-x-scroll ssm:overflow-x-scroll' >
                         <ul className='flex gap-3 justify-start px-5 m-0 '>
@@ -168,15 +112,9 @@ const Shopping = ({ addcart }) => {
                         </div>
                     )}
 
- 
-
-                    
-
                     {!shop && (
                         <div className=''>
-
                             <div className={"  "}>
-
                                 {productData.slice(0, 1).map((pro) => (
                                     <ShopList
                                         key={pro.id}
@@ -193,22 +131,16 @@ const Shopping = ({ addcart }) => {
                         </div>
 
                     )}
-
-
-
-
                     <Cart cartitem={cart} removeItem={removeItem} handleremove={handleremove} cart={cart} quantity={quantity} setquantity={setquantity} />
                 </div>
                 <div className='flex  justify-center'>
-
                     <button className='border border-violet-500 text-cyan-100 font-bold w-40 h-10 rounded-full bg-violet-400 items-center mt-20 text-xl hover:bg-violet-500' onClick={handleshop}> {shop ? "Show Less" : "Show All"}  </button>
-                    {/* <Cart cartitem={cart}/> */}
+                  
                 </div>
             </section>
         </>
     )
 }
-
 export default Shopping
 
 
