@@ -22,8 +22,8 @@ const ShopList = ({ id, product, shop, AddtoCart, cart,   removeitem }) => {
 
       {shop && (
         <div className=''>
-          <div id={id} className={`flex    sm:flex-row md:flex-col lg:flex-col  ssm:flex-row  moreSmall:flex-col  flex-col ${shop ? ' ' : 'border border-black   '} moreSmall:border border-red-600 moreSmall:w-3/4  moreSmall:m-auto      ssm:border border-violet-400   sm:border border-violet-300 bg-white rounded-2xl px-2 md:border   lg:border    `}>
-            <img className='    sm:w-56 ssm:w-3/4 md:w-3/4    h-52   relative  items-center shadow-xl shadow-violet-700/80   p-0 m-10 mb-3 mt-2      rounded-2xl   ' src={img} />
+          <div id={id} className={`flex    sm:flex-row md:flex-col lg:flex-col  ssm:flex-row   moreSmall:flex-col  flex-col ${shop ? ' ' : 'border border-black   '} moreSmall:border border-red-600 moreSmall:w-56  moreSmall:m-auto      ssm:border border-violet-400   sm:border border-violet-300 bg-white rounded-2xl px-2 md:border   lg:border    `}>
+            <img className='  moreSmall:w-full moreSmall:m-0  sm:w-56 ssm:w-3/4 md:w-3/4    h-52   relative  items-center shadow-xl shadow-violet-700/80   p-0 m-10 mb-3 mt-2      rounded-2xl   ' src={img} />
             <div className='   flex flex-col items-start px-3   ml-1  '>
 
               <p className=' px-3 font-bold text-xl m-1 '> {title}</p>

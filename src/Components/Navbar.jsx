@@ -32,7 +32,7 @@ const Navbar = () => {
                 <div className='flex justify-between bg-violet-50 '>
                     <div>
 
-                        <div className=' mt-2 '>
+                        <div className='ml-2 mt-2 '>
                             <Button variant='outline-secondary' onClick={handleShow}>
                                 <img src='img/setting.png' className='w-6 mix-blend-darken ssm:w-5  sm:w-5 md:w-8 lg:8  ' />
                             </Button>
