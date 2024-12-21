@@ -46,23 +46,23 @@ const Shopping = ({ addcart }) => {
     }
 
     const productData = [
-        { id: "1", title: "EarPhone", review: "⭐⭐⭐⭐", img: "public/img/e1.jpg", price: "100" },
-        { id: "2", title: "HeadPhone", review: "⭐⭐⭐", img: "public/img/h1.jpg", price: "699" },
-        { id: "3", title: "Wireless", review: "⭐⭐⭐⭐", img: "public/img/we1.jpg", price: "599" },
-        { id: "4", title: "SmartWatch", review: "⭐⭐⭐⭐", img: "public/img/ww1.jpeg", price: "799" },
-        { id: "5", title: "EarPhone", review: "⭐⭐⭐⭐", img: "public/img/e3.jpg", price: "299" },
+        { id: "1", title: "EarPhone", review: "⭐⭐⭐⭐", img: "img/e1.jpg", price: "100" },
+        { id: "2", title: "HeadPhone", review: "⭐⭐⭐", img: "img/h1.jpg", price: "699" },
+        { id: "3", title: "Wireless", review: "⭐⭐⭐⭐", img: "img/we1.jpg", price: "599" },
+        { id: "4", title: "SmartWatch", review: "⭐⭐⭐⭐", img: "img/ww1.jpeg", price: "799" },
+        { id: "5", title: "EarPhone", review: "⭐⭐⭐⭐", img: "img/e3.jpg", price: "299" },
 
-        { id: "6", title: "HeadPhone", review: "⭐⭐⭐⭐", img: "public/img/h3.jpg", price: "899" },
-        { id: "7", title: "Wireless", review: "⭐⭐⭐", img: "public/img/we3.jpg", price: "699" },
-        { id: "8", title: "SmartWatch", review: "⭐⭐", img: "public/img/ww3.png", price: "1999" },
-        { id: "9", title: "EarPhone", review: "⭐⭐⭐", img: "public/img/e4.jpg", price: "199" },
-        { id: "10", title: "HeadPhone", review: "⭐⭐⭐⭐⭐", img: "public/img/h4.jpg", price: "1099" },
-        { id: "11", title: "Wireless", review: "⭐⭐", img: "public/img/we4.jpg", price: "799" },
-        { id: "12", title: "SmartWatch", review: "⭐⭐⭐", img: "public/img/ww4.jpg", price: "1299" },
-        { id: "13", title: "EarPhone", review: "⭐⭐⭐", img: "public/img/e5.jpg", price: "329" },
-        { id: "14", title: "HeadPhone", review: "⭐⭐⭐⭐", img: "public/img/h5.jpg", price: "749" },
-        { id: "15", title: "Wireless", review: "⭐⭐⭐⭐", img: "public/img/we5.jpg", price: "659" },
-        { id: "16", title: "SmartWatch", review: "⭐⭐⭐⭐", img: "public/img/ww5.jpg", price: "999" },
+        { id: "6", title: "HeadPhone", review: "⭐⭐⭐⭐", img: "img/h3.jpg", price: "899" },
+        { id: "7", title: "Wireless", review: "⭐⭐⭐", img: "img/we3.jpg", price: "699" },
+        { id: "8", title: "SmartWatch", review: "⭐⭐", img: "img/ww3.png", price: "1999" },
+        { id: "9", title: "EarPhone", review: "⭐⭐⭐", img: "img/e4.jpg", price: "199" },
+        { id: "10", title: "HeadPhone", review: "⭐⭐⭐⭐⭐", img: "img/h4.jpg", price: "1099" },
+        { id: "11", title: "Wireless", review: "⭐⭐", img: "img/we4.jpg", price: "799" },
+        { id: "12", title: "SmartWatch", review: "⭐⭐⭐", img: "img/ww4.jpg", price: "1299" },
+        { id: "13", title: "EarPhone", review: "⭐⭐⭐", img: "img/e5.jpg", price: "329" },
+        { id: "14", title: "HeadPhone", review: "⭐⭐⭐⭐", img: "img/h5.jpg", price: "749" },
+        { id: "15", title: "Wireless", review: "⭐⭐⭐⭐", img: "img/we5.jpg", price: "659" },
+        { id: "16", title: "SmartWatch", review: "⭐⭐⭐⭐", img: "img/ww5.jpg", price: "999" },
     ];
 
 
@@ -142,86 +142,4 @@ const Shopping = ({ addcart }) => {
     )
 }
 export default Shopping
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
