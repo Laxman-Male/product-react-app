@@ -34,7 +34,7 @@ const Navbar = () => {
 
                         <div className=' mt-2 '>
                             <Button variant='outline-secondary' onClick={handleShow}>
-                                <img src='img/setting.png' className='w-6 mix-blend-darken ssm:w-5  sm:w-5 md:w-8 lg:8  ' />
+                                <img src='public/img/setting.png' className='w-6 mix-blend-darken ssm:w-5  sm:w-5 md:w-8 lg:8  ' />
                             </Button>
 
                             <Offcanvas show={show} onHide={handleClose} placement="start">

@@ -3,7 +3,7 @@ import Shopping from './Shopping';
 import Cart from './Cart';
 
 
-const ShopList = ({ id, product, shop, AddtoCart, cart, backToCart, setbackToCart, handleremove, removeitem, setremoveitem }) => {
+const ShopList = ({ id, product, shop, AddtoCart, cart,   removeitem }) => {
   const { title, review, img, price } = product;
 
   const [addcart, setaddcart] = useState(false)
