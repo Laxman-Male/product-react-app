@@ -13,12 +13,12 @@ const Shopping = ({ addcart }) => {
     const [removeItem, setremoveItem] = useState(false)
     const [backToCart, setbackToCart] = useState(true)
     const [cart, setcart] = useState([])
-    const [filter,setFilter]= useState('All')
+    const [filter, setFilter] = useState('All')
 
     const AddtoCart = (product) => {
         setcart(prevCart => {
             if (prevCart.some(item => item.id === product.id)) {
-                 return prevCart
+                return prevCart
             }
             else {
                 console.log("adding new product")
@@ -66,13 +66,13 @@ const Shopping = ({ addcart }) => {
     ];
 
 
-    const filterEarphone=(category)=>{
+    const filterEarphone = (category) => {
         setFilter(category)
         console.log(filter)
         console.log(productData)
 
     }
-    const filteredData= productData.filter(product=> filter==='All' || product.title===filter);
+    const filteredData = productData.filter(product => filter === 'All' || product.title === filter);
 
     return (
 
@@ -85,15 +85,15 @@ const Shopping = ({ addcart }) => {
                     {shop && (
                         <div className='flex justify-center flex-col'>
 
-                             <div className=' sm:overflow-x-scroll ssm:overflow-x-scroll' >
-                        <ul className='flex gap-3 justify-start px-5 m-0 '>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={()=>filterEarphone('All')} >All </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1 font-semibold cursor-pointer ' onClick={()=>filterEarphone('EarPhone')}> EarPhone </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={()=>filterEarphone('HeadPhone')} > HeadPhone </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={()=>filterEarphone('Wireless')} > Wireless </li>
-                            <li className='border border-violet-600 bg-violet-400 rounded-md px-2  py-1 font-semibold cursor-pointer' onClick={()=>filterEarphone('SmartWatch')} > SmartWatch </li>
-                        </ul>
-                    </div>
+                            <div className=' sm:overflow-x-scroll ssm:overflow-x-scroll' >
+                                <ul className='flex gap-3 justify-start px-5 m-0 '>
+                                    <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={() => filterEarphone('All')} >All </li>
+                                    <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1 font-semibold cursor-pointer ' onClick={() => filterEarphone('EarPhone')}> EarPhone </li>
+                                    <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={() => filterEarphone('HeadPhone')} > HeadPhone </li>
+                                    <li className='border border-violet-600 bg-violet-400 rounded-md px-2 py-1  font-semibold cursor-pointer ' onClick={() => filterEarphone('Wireless')} > Wireless </li>
+                                    <li className='border border-violet-600 bg-violet-400 rounded-md px-2  py-1 font-semibold cursor-pointer' onClick={() => filterEarphone('SmartWatch')} > SmartWatch </li>
+                                </ul>
+                            </div>
                             <div className={" grid lg:grid-cols-3 xl:grid-cols-4   gap-2   rounded-lg  shadow-2xl  md:grid-cols-2 sm:grid-cols-1 ssm:grid-cols-1 middle:grid-cols-3   p-5"}>
 
                                 {filteredData.map((pro) => (
@@ -135,7 +135,7 @@ const Shopping = ({ addcart }) => {
                 </div>
                 <div className='flex  justify-center'>
                     <button className='border border-violet-500 text-cyan-100 font-bold w-40 h-10 rounded-full bg-violet-400 items-center mt-20 text-xl hover:bg-violet-500' onClick={handleshop}> {shop ? "Show Less" : "Show All"}  </button>
-                  
+
                 </div>
             </section>
         </>
