@@ -8,7 +8,7 @@ const Fotter = () => {
                 <p className='font-sans text-lg text-violet-50'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique aliquid ad qui porro nam doloribus maiores commodi in vitio!ae distinct</p>
             </div>
 
-           
+
             <div className=' -500 p-4 sm: items-center flex flex-col'>
                 <p className='text-blue-300 font-semibold font-sans text-xl'> Quick Link </p>
                 <p className='hover:cursor-pointer hover:text-violet-50'>FAQ's </p>
@@ -23,7 +23,7 @@ const Fotter = () => {
                 <form>
                     <div>
 
-                    <input type='email' placeholder='Your email-here' className='w-48 rounded-md  h-8 p-2' />
+                        <input type='email' placeholder='Your email-here' className='w-48 rounded-md  h-8 p-2' />
                     </div>
                     <button className='border border-violet-50 w-48 rounded-md p-1 mt-3   font-semibold  bg-violet-200 text-violet-900 hover:bg-violet-700 hover:text-violet-50'> Subscribe </button>
                 </form>

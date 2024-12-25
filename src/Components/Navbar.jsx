@@ -22,21 +22,21 @@ const Navbar = () => {
     })
     const onSubmit = (data) => console.log(data)
 
-const [showSetting, setShowSetting] = useState(false);
-const [showAnother, setShowAnother] = useState(false);
+    const [showSetting, setShowSetting] = useState(false);
+    const [showAnother, setShowAnother] = useState(false);
 
-// Toggle functions for each offcanvas
-const handleShowSetting = () => {
-    setShowSetting(true);
-    console.log('show another')
-}
-const handleCloseSetting = () => setShowSetting(false);
+    // Toggle functions for each offcanvas
+    const handleShowSetting = () => {
+        setShowSetting(true);
+        console.log('show another')
+    }
+    const handleCloseSetting = () => setShowSetting(false);
 
-const handleShowAnother = () => {
-    setShowAnother(true);
-    console.log("another show ")
-}
-const handleCloseAnother = () => setShowAnother(false);
+    const handleShowAnother = () => {
+        setShowAnother(true);
+        console.log("another show ")
+    }
+    const handleCloseAnother = () => setShowAnother(false);
 
 
 
@@ -64,12 +64,12 @@ const handleCloseAnother = () => setShowAnother(false);
 
     return (
         <>
-            
+
             <div className={`flex  `} >
 
                 <div className=' bg-violet-50 w-full '>
                     <div  >
- 
+
                     </div>
                     <ul className=' flex gap-5 justify-center px-5 py-2'>
 
@@ -91,10 +91,11 @@ const handleCloseAnother = () => setShowAnother(false);
             </div>
 
             <div className=''>
-
-<Button variant='outline-secondary' onClick={handleShowAnother}>
-                    <img src='img/setting.png' className='w-6 mix-blend-darken moreSmall:w-5 ssm:w-5  sm:w-4 md:w-5 lg:w-6  ' />
-                </Button>
+                <div>
+                    <Button className='ml-4 mt-2' variant='outline-secondary' onClick={handleShowAnother}>
+                        <img src='img/setting.png' className='w-6 mix-blend-darken moreSmall:w-5 ssm:w-5  sm:w-4 md:w-5 lg:w-6  ' />
+                    </Button>
+                </div>
 
                 <Offcanvas show={showAnother} onHide={handleCloseAnother} placement="start">
                     <Offcanvas.Header closeButton>
@@ -145,7 +146,7 @@ const handleCloseAnother = () => setShowAnother(false);
 
                     </div>
                 </Offcanvas>
-</div>
+            </div>
 
 
 
