@@ -91,10 +91,11 @@ const Navbar = () => {
             </div>
 
             <div className=''>
-
-                <Button variant='outline-secondary' onClick={handleShowAnother}>
-                    <img src='img/setting.png' className='w-6 mix-blend-darken moreSmall:w-5 ssm:w-5  sm:w-4 md:w-5 lg:w-6  ' />
-                </Button>
+                <div>
+                    <Button className='ml-4 mt-2' variant='outline-secondary' onClick={handleShowAnother}>
+                        <img src='img/setting.png' className='w-6 mix-blend-darken moreSmall:w-5 ssm:w-5  sm:w-4 md:w-5 lg:w-6  ' />
+                    </Button>
+                </div>
 
                 <Offcanvas show={showAnother} onHide={handleCloseAnother} placement="start">
                     <Offcanvas.Header closeButton>
