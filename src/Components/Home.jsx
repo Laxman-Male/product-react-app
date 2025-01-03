@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { use } from "react";
+// import { use } from "react";
 import ShopList from "./ShopList";
 import Shopping from "./Shopping";
 
-const Home = () => {
+const Home = (buyBtn) => {
   const [Buynow, setBuynow] = useState(false);
-  const toggleShop = () => {
+  const toggleBuy = () => {
     console.log("buy now ");
-    setBuynow(true);
+    console.log(Buynow);
+    setBuynow(buyBtn);
   };
 
   return (
@@ -42,7 +43,7 @@ const Home = () => {
           >
             <button
               className="bg-violet-400  px-3 py-2 font-bold text-xl rounded-2xl text-white hover:bg-violet-700   cursor-pointer mt-10 moreSmall:ml-3 moreSmall:h-11 "
-              onClick={toggleShop}
+              onClick={toggleBuy}
             >
               Buy Now{" "}
             </button>
@@ -63,7 +64,7 @@ const Home = () => {
           transition={{ duration: 1, delay: 1 }}
         />
       </div>
-      {/* <Shopping toggleShop={toggleShop} /> Buy now{" "} */}
+      {/* <Shopping toggleShop={toggleShop} /> */}
     </>
   );
 };

@@ -167,9 +167,11 @@ const Shopping = ({ addcart }) => {
   const filteredData = productData.filter(
     (product) => filter === "All" || product.title === filter
   );
+  const [buyBtn, setbuyBtn] = useState(false);
 
   return (
     <>
+      <Home buyBtn={shop} />
       <section>
         <div className="   ">
           <div className="font-bold text-4xl flex  justify-center py-3 moreSmall:ml-4">
