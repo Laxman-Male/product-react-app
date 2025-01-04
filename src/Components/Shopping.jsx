@@ -4,10 +4,7 @@ import Cart from "./Cart";
 import Home from "./Home";
 const Shopping = ({ addcart }) => {
   const [shop, setshop] = useState(false);
-  const handleshop = () => {
-    setshop(!shop);
-    console.log(shop);
-  };
+
   const [quantity, setquantity] = useState({});
 
   const [removeItem, setremoveItem] = useState(false);
@@ -167,11 +164,15 @@ const Shopping = ({ addcart }) => {
   const filteredData = productData.filter(
     (product) => filter === "All" || product.title === filter
   );
-  const [buyBtn, setbuyBtn] = useState(false);
+
+  const handleshop = () => {
+    setshop((prevShop) => !prevShop);
+    console.log(shop);
+  };
 
   return (
     <>
-      <Home buyBtn={shop} />
+      <Home shop={shop} setshop={setshop} />
       <section>
         <div className="   ">
           <div className="font-bold text-4xl flex  justify-center py-3 moreSmall:ml-4">

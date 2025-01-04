@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 // import { use } from "react";
 import ShopList from "./ShopList";
 import Shopping from "./Shopping";
 
-const Home = (buyBtn) => {
+const Home = ({ shop, setshop }) => {
   const [Buynow, setBuynow] = useState(false);
+  useEffect(() => {
+    setBuynow(shop);
+  }, [shop]);
+
   const toggleBuy = () => {
     console.log("buy now ");
-    console.log(Buynow);
-    setBuynow(buyBtn);
+    setshop(!shop);
   };
 
   return (
@@ -45,8 +48,9 @@ const Home = (buyBtn) => {
               className="bg-violet-400  px-3 py-2 font-bold text-xl rounded-2xl text-white hover:bg-violet-700   cursor-pointer mt-10 moreSmall:ml-3 moreSmall:h-11 "
               onClick={toggleBuy}
             >
-              Buy Now{" "}
+              Buy Now
             </button>
+
             <button className="bg-violet-400  px-3 py-2 font-bold text-xl rounded-2xl text-white hover:bg-violet-700 cursor-pointer mt-10 moreSmall:h-11 ml-5 ">
               {" "}
               Shop all{" "}

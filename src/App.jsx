@@ -16,7 +16,6 @@ function App() {
     <>
       <div className="bg-gradient-to-t from-violet-300">
         <Navbar />
-        {/* <Home /> */}
         <Cart />
         <Shopping />
         <About />
