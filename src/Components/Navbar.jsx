@@ -60,7 +60,7 @@ const Navbar = () => {
   return (
     <>
       <div className=" m-2">
-        <Button variant="outline-secondary" onClick={handleShowAnother}>
+        <Button variant="" onClick={handleShowAnother}>
           <img
             src="img/setting.png"
             className="w-6 mix-blend-darken moreSmall:w-5 ssm:w-5  sm:w-4 md:w-5 lg:w-6  "
